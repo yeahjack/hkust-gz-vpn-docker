@@ -23,7 +23,7 @@ Content of config.env:
 
 ```
 USER=abc123
-PASS=ABC123Password
+PASS=ABC123
 URL=remote.hkust-gz.edu.cn
 OC_ARGS=--protocol=pulse --authgroup=Student
 ```
@@ -32,12 +32,13 @@ For students, set `--authgroup=Student`, for staff, set `--authgroup=Staff`.
 Command:
 
 ```sh
-podman run -d --name hkust-gz-vpn --env-file=config.env -p 11080:1080 ghcr.io/yeahjack/hkust-gz-vpn:latest
-# or simple docker
-docker run -d --name hkust-gz-vpn --env-file=config.env -p 11080:1080 ghcr.io/yeahjack/hkust-gz-vpn:latest
+# For X86_64 Users
+docker run -d --name hkust-gz-vpn --env-file=config.env --privileged -p 11080:1080 yeahjack/hkust-gz-vpn:amd64
+# For Mac M1 ARM64 Users
+docker run -d --name hkust-gz-vpn --env-file=config.env --privileged -p 11080:1080 yeahjack/hkust-gz-vpn:m1_arm64
 # you can also build the image locally
-docker build -t hkust-gz-vpn-docker .
-docker run -d --name hkust-gz-vpn --env-file=config.env --privileged -p 11080:1080 hkust-gz-vpn-docker
+docker build -t hkust-gz-vpn .
+docker run -d --name hkust-gz-vpn --env-file=config.env --privileged -p 11080:1080 hkust-gz-vpn
 ```
 
 Access local port 11080 for a socks5 proxy, or use `nc` to forward ssh connection:
