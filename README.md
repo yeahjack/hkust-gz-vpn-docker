@@ -36,7 +36,7 @@ Command:
 docker run -d --name hkust-gz-vpn --env-file=config.env --privileged -p 11080:1080 yeahjack/hkust-gz-vpn:amd64
 # For Mac M1 ARM64 Users
 docker run -d --name hkust-gz-vpn --env-file=config.env --privileged -p 11080:1080 yeahjack/hkust-gz-vpn:m1_arm64
-# you can also build the image locally
+# You can also build the image locally
 docker build -t hkust-gz-vpn .
 docker run -d --name hkust-gz-vpn --env-file=config.env --privileged -p 11080:1080 hkust-gz-vpn
 ```
