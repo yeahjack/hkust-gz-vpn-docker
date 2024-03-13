@@ -37,7 +37,7 @@ podman run -d --name hkust-gz-vpn --env-file=config.env -p 11080:1080 ghcr.io/ye
 docker run -d --name hkust-gz-vpn --env-file=config.env -p 11080:1080 ghcr.io/yeahjack/hkust-gz-vpn:latest
 # you can also build the image locally
 docker build -t hkust-gz-vpn-docker .
-docker run -d --name hkust-gz-vpn --env-file=config.env -p 11080:1080 hkust-gz-vpn-docker
+docker run -d --name hkust-gz-vpn --env-file=config.env --privileged -p 11080:1080 hkust-gz-vpn-docker
 ```
 
 Access local port 11080 for a socks5 proxy, or use `nc` to forward ssh connection:
