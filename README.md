@@ -1,6 +1,6 @@
 # HKUST-GZ-VPN
 
-Bored of using Ivanti Secure Access outside of the campus and found that you could not visit ChatGPT? This image is for you.
+Bored of using Ivanti Secure Access outside of the campus and found that you couldn't visit ChatGPT or access your preferred sites due to global network restrictions? This Docker image is for you. It offers a flexible solution for selectively routing network traffic through your school's network while bypassing these restrictions, ensuring that you can access all your essential services without compromise.
 
 ## Usage
 
