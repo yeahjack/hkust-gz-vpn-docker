@@ -48,4 +48,4 @@ Note that remember to check the `config_path` variable in the `.py` file!
 For website services, you could refer to [Proxy SwitchyOmega](https://chromewebstore.google.com/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif) extension and add a new profile with `SOCKS5` proxy type with `http://127.0.0.1:11080`.
 
 # Credit
-Thank you for repo [ocproxy-oci](https://github.com/thezzisu/ocproxy-oci), I could not make it without it.
+Thank you for repo [ocproxy-oci](https://github.com/thezzisu/ocproxy-oci), I just made a few modifications to make it work for HKUST(GZ) users.
