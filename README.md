@@ -25,9 +25,9 @@ Content of config.env:
 USER=abc123
 PASS=ABC123
 URL=remote.hkust-gz.edu.cn
-OC_ARGS=--protocol=pulse --authgroup=Student
+OC_ARGS=--protocol=nc --authgroup=Student
 ```
-For students, set `--authgroup=Student`, for staff, set `--authgroup=Staff`.
+`USER` is the prefix before `@`. For students, set `--authgroup=Student`, for staff, set `--authgroup=Staff`.
 
 Command:
 
@@ -46,6 +46,8 @@ Access local port 11080 for a socks5 proxy, or use `nc` to forward ssh connectio
 ```sh
 ssh -o ProxyCommand='nc -x 127.0.0.1:11080 %h %p' username@IP
 ```
+
+For website services, you could refer to [Proxy SwitchyOmega](https://chromewebstore.google.com/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif) extension and add a new profile with `SOCKS5` proxy type with `http://127.0.0.1:11080`.
 
 # Credit
 Thank you for repo [ocproxy-oci](https://github.com/thezzisu/ocproxy-oci), I could not make it without it.
